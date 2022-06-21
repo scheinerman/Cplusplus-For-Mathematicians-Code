@@ -1,0 +1,75 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2005.07.22.16.55.18;	author ers;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.07.22.14.30.12;	author ers;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.07.22.14.14.23;	author ers;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@dance.pdf:	dance.eps
+	epstopdf dance.eps
+
+dance.eps:	dance.gif
+	convert dance.gif dance.eps
+
+dance.gif: dance
+	./dance 50000
+
+
+OBJS = dance.o Point.o uniform.o
+dance:	$(OBJS)
+	g++ $(OBJS) -o dance -L/Users/ers/Common/lib -lplotter
+
+CXXFLAGS = -I /Users/ers/Common/include
+
+.phony:	clean
+
+clean:
+	rm -f dance $(OBJS)@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d8 1
+a8 1
+	./dance 100000
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d8 1
+a8 1
+	./dance
+d16 5
+@

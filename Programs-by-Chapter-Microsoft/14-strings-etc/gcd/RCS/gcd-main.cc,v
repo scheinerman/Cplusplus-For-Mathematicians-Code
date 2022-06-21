@@ -1,0 +1,57 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.2
+date	2004.12.28.16.44.34;	author ers;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.12.28.13.53.32;	author ers;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@#include <iostream>
+#include "gcd.h"
+
+using namespace std;
+
+int main(int argc, char** argv) {
+  if (argc != 3) {
+    cerr << "Usage: " << argv[0] << " n1 n2" << endl;
+    cerr << "to find the gcd of n1 and n2" << endl;
+    return 1;
+  }
+
+  long n1 = atol(argv[1]);
+  long n2 = atol(argv[2]);
+  cout << gcd(n1,n2) << endl;
+  
+  return 0;
+}
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+a6 1
+int main(int argc, char **argv) {
+@

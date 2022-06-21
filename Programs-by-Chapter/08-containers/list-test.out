@@ -1,0 +1,7 @@
+Here is the list: 99 0 24 7 4 15 5 
+The first element of the list is: 99
+The last element of the list is: 5
+The list contains 7 elements
+And now sorted:   0 4 5 7 15 24 99 
+First and last deleted: 4 5 7 15 24 
+Even values deleted: 5 7 15 

@@ -1,0 +1,13 @@
+Program		File Name
+-------		---------
+3.1		first-gcd.h
+3.2		second-gcd.h
+3.3-5		gcd-bad.cc
+3.6		gcd-tester-1.cc
+3.7		gcd-recursive.cc
+3.8		gcd-iterative.cc
+3.9		exhaust-1.cc
+3.10		exhaust-2.cc
+3.11		gcdx.cc
+
+Also:	gcdx.h

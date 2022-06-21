@@ -1,0 +1,73 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2005.07.22.19.48.58;	author ers;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.07.22.14.04.32;	author ers;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.07.22.13.33.23;	author ers;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@CXXFLAGS = -I /Users/ers/Common/include
+
+.phony:	all
+all:	pascal.gif pascal.eps pascal.pdf
+
+pascal.eps:	pascal.gif
+	convert pascal.gif pascal.eps
+
+pascal.pdf:	pascal.eps
+	epstopdf pascal.eps
+
+pascal.gif: 	pascal
+	./pascal
+
+pascal:	pascal.o
+	g++ pascal.o -o pascal -L/Users/ers/Common/lib -lplotter
+
+.phony: clean
+
+clean:
+	rm -f pascal.o pascal @
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d21 1
+a21 1
+	rm -f pascal.o pascal pascal.gif pascal.eps pascal.pdf@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 9
+d17 5
+@

@@ -1,0 +1,90 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=Windows-1252">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: lib_gmpxx, Configuration: Release|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "d:\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\gmp.build.vc7\lib_gmpxx\Release\RSP000009.rsp" with contents
+[
+/O2 /I "..\\" /I "..\..\\" /I "..\..\mpn\generic" /D "_WIN32" /D "WIN32" /D "NDEBUG" /D "_LIB" /D "HAVE_CONFIG_H" /D "_MBCS" /FD /EHsc /MT /GS /Fo"Release/" /Fd"Release\gmpxx.pdb" /W3 /c /Wp64 /Zi /TP
+"\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\cxx\osmpz.cc"
+"\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\cxx\osmpq.cc"
+"\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\cxx\osmpf.cc"
+"\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\cxx\osfuns.cc"
+"\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\cxx\osdoprnti.cc"
+"\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\cxx\ismpz.cc"
+"\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\cxx\ismpq.cc"
+"\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\cxx\ismpf.cc"
+"\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\cxx\isfuns.cc"
+]
+Creating command line "cl.exe @"d:\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\gmp.build.vc7\lib_gmpxx\Release\RSP000009.rsp" /nologo"
+Creating temporary file "d:\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\gmp.build.vc7\lib_gmpxx\Release\RSP00000A.rsp" with contents
+[
+/OUT:"Release\gmpxx.lib" /NOLOGO
+"\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\gmp.build.vc7\lib\gmp.lib"
+".\Release\isfuns.obj"
+".\Release\ismpf.obj"
+".\Release\ismpq.obj"
+".\Release\ismpz.obj"
+".\Release\osdoprnti.obj"
+".\Release\osfuns.obj"
+".\Release\osmpf.obj"
+".\Release\osmpq.obj"
+".\Release\osmpz.obj"
+]
+Creating command line "lib.exe @"d:\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\gmp.build.vc7\lib_gmpxx\Release\RSP00000A.rsp""
+Creating temporary file "d:\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\gmp.build.vc7\lib_gmpxx\Release\BAT00000B.bat" with contents
+[
+@echo off
+copy Release\gmpxx.lib ..\lib\gmpxx.lib
+copy Release\gmpxx.pdb ..\lib\gmpxx.pdb
+
+if errorlevel 1 goto VCReportError
+goto VCEnd
+:VCReportError
+echo Project : error PRJ0019: A tool returned an error code from "Performing Post-Build Event..."
+exit 1
+:VCEnd
+]
+Creating command line ""d:\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\gmp.build.vc7\lib_gmpxx\Release\BAT00000B.bat""
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+osmpz.cc
+..\gmp.h(1591) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+osmpq.cc
+..\gmp.h(1591) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+osmpf.cc
+..\gmp.h(1591) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\cxx\osmpf.cc(52) : warning C4267: 'argument' : conversion from 'size_t' to 'std::streamsize', possible loss of data
+osfuns.cc
+..\gmp.h(1591) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+osdoprnti.cc
+..\gmp.h(1591) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\cxx\osdoprnti.cc(60) : warning C4267: 'argument' : conversion from 'size_t' to 'std::streamsize', possible loss of data
+ismpz.cc
+..\gmp.h(1591) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+ismpq.cc
+..\gmp.h(1591) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+ismpf.cc
+..\gmp.h(1591) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+isfuns.cc
+..\gmp.h(1591) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+Generating Code...
+Creating library...
+Performing Post-Build Event...
+        1 file(s) copied.
+        1 file(s) copied.
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://d:\My Documents\Book\visual-studio\other-packages\gmp-4.1.4\gmp.build.vc7\lib_gmpxx\Release\BuildLog.htm"
+lib_gmpxx - 0 error(s), 11 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

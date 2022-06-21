@@ -1,0 +1,16 @@
+Program		File Name
+-------		---------
+14.1		string-sort.cc
+14.2		test-main.cc
+14.3		gcd-main.cc
+14.4		process-files.cc
+14.5		ofstream_example.cc
+14.6		ifstream_example.cc
+14.7		string_stream_example.cc
+14.8		LineParser.h
+14.9		LineParser.cc
+14.10		parse-main.cc
+14.11		xo.cc
+14.12		pascal.cc
+14.13		dance/dance.cc
+14.14		paley/paley.cc

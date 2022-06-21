@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "perm-test", "perm-test\perm-test.vcproj", "{C6FEDC73-4E46-433A-AC2F-34D936FAF717}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ulam", "ulam\ulam.vcproj", "{B1785326-3F9B-4382-BEDA-0CD550B5D59B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C6FEDC73-4E46-433A-AC2F-34D936FAF717}.Debug.ActiveCfg = Debug|Win32
+		{C6FEDC73-4E46-433A-AC2F-34D936FAF717}.Debug.Build.0 = Debug|Win32
+		{C6FEDC73-4E46-433A-AC2F-34D936FAF717}.Release.ActiveCfg = Release|Win32
+		{C6FEDC73-4E46-433A-AC2F-34D936FAF717}.Release.Build.0 = Release|Win32
+		{B1785326-3F9B-4382-BEDA-0CD550B5D59B}.Debug.ActiveCfg = Debug|Win32
+		{B1785326-3F9B-4382-BEDA-0CD550B5D59B}.Debug.Build.0 = Debug|Win32
+		{B1785326-3F9B-4382-BEDA-0CD550B5D59B}.Release.ActiveCfg = Release|Win32
+		{B1785326-3F9B-4382-BEDA-0CD550B5D59B}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

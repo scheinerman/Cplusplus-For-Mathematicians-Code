@@ -1,0 +1,217 @@
+head	1.6;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.6
+date	2005.07.22.19.51.28;	author ers;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2005.07.22.19.46.01;	author ers;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2005.07.22.19.45.52;	author ers;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2005.07.22.16.49.57;	author ers;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.07.22.14.29.13;	author ers;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.07.22.14.09.56;	author ers;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@#include <iostream>
+#include <fstream>
+#include "plotter.h"
+#include "Point.h"
+#include "uniform.h"
+using namespace std;
+
+const char* IMAGE_FILE = "dance.gif";
+
+// Draw a point on a plotter.
+void draw_point(Plotter& P, const Point& X) { 
+  P.fpoint(X.getX(), X.getY());
+}
+
+int main(int argc, char** argv) {
+  // check that user specified number of points
+  if (argc < 2) {
+    cerr << "Usage: " << argv[0] << " npoints" << endl;
+    return 1;
+  }
+
+  int NPOINTS;
+
+  // convert 2nd arg to an integer; make sure its positive
+  NPOINTS = atoi(argv[1]);
+  if (NPOINTS < 1) {
+    cerr << "Usage: " << argv[0] << " npoints" << endl;
+    cerr << "where npoints is a positive integer" << endl;
+    return 1;
+  }
+
+  // Set the corners of the triangle
+  Point A(0.,0.);
+  Point B(1.,0.);
+  Point C(0.5, sqrt(3.)/2.);
+  
+  Point X; // the dancing point
+
+  // Construct the plotter 
+  PlotterParams params;
+  ofstream pout(IMAGE_FILE);
+  GIFPlotter P(cin, pout, cerr, params);
+
+  // Open the plotter
+  if (P.openpl() < 0) {
+    cerr << "Unable to open plotter" << endl;
+    return 1;
+  }
+
+  // Set up my coordinate system
+  P.fspace(0.,0.,1.,1.);
+  
+  // Set drawing parameters
+  P.pencolorname("black");
+
+  // Draw the corners
+  draw_point(P,A);
+  draw_point(P,B);
+  draw_point(P,C);
+
+  // Start X at A
+  X = A;
+
+  for (int k=0; k<NPOINTS; k++) {
+    switch(unif(3)) {
+    case 1:
+      X = midpoint(A,X);
+      break;
+    case 2:
+      X = midpoint(B,X);
+      break;
+    case 3:
+      X = midpoint(C,X);
+      break;
+    default:
+      cerr << "This can't happen" << endl;
+    }
+    draw_point(P,X);
+  }
+
+  // Close the image
+  if (P.closepl() < 0) {
+    cerr << "Unable to close plotter" << endl;
+    return 1;
+  }
+
+  return 0;
+}
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d84 1
+a84 1
+    return 2;
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@a87 1
+
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d39 1
+a39 1
+  // Set up the plotter 
+a40 1
+  params.setplparam ("PAGESIZE", (char *)"letter");
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@a54 1
+  P.linewidth(1);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d10 28
+a37 1
+int main() {
+a41 1
+
+d52 2
+a53 2
+  P.space(-1,-1,NROWS+1,NROWS+1);
+
+d58 21
+a78 5
+  // Generate rows of Pascal's triangle (mod 2)
+  for (int r=0; r<NROWS; r++) {
+    row[0] = 1;
+    for (int j=1; j<r; j++) {
+      row[j] = (prev_row[j-1]+prev_row[j])%2;
+d80 1
+a80 11
+    row[r] = 1;
+    
+    // Plot points for this row
+    for (int j=0; j<=r; j++) {
+      if (row[j] == 1) {
+	P.point(NROWS-r,j);
+      }
+    }
+
+    // copy row to prev_row
+    for (int j=0; j<=r; j++) prev_row[j] = row[j];
+@

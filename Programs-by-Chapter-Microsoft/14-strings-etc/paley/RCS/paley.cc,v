@@ -1,0 +1,197 @@
+head	1.4;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.4
+date	2005.07.22.19.50.42;	author ers;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2005.07.22.15.52.43;	author ers;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.07.22.15.51.34;	author ers;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.07.22.15.08.56;	author ers;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@#include <iostream>
+#include <fstream>
+#include <set>
+#include "plotter.h"
+#include "Mod.h"
+using namespace std;
+
+const char* IMAGE_FILE = "paley.eps";
+
+int main(int argc, char** argv) {
+  // check that user specified number of points
+  if (argc < 2) {
+    cerr << "Usage: " << argv[0] << " n" << endl;
+    return 1;
+  }
+
+  int n;  // number of vertices in the graph and the modulus
+
+  // convert 2nd arg to an integer; make sure its positive
+  n = atoi(argv[1]);
+  if (n < 3) {
+    cerr << "Usage: " << argv[0] << " n" << endl;
+    cerr << "where n is an integer greater than 2" << endl;
+    return 1;
+  }
+
+  // We'll only be working in Z_n
+  Mod::set_default_modulus(n) ;
+  
+  // Find all perfect squares in Z_n
+  set<Mod> squares;
+  for(int k=0; k<n; k++) {
+    Mod S(k*k);
+    squares.insert(S);
+  }
+
+  // Check if -1 is a perfect square
+  Mod neg1(-1);
+  
+  if (squares.find(neg1) == squares.end()) {
+    cerr << "-1 is not a perfect square in Z_" << n << endl;
+    return 1;
+  }
+  
+  // Create tables of the x and y coordinates of the vertex centers
+  float* x = new float[n];
+  float* y = new float[n];
+
+  double theta = 2*M_PI/n;
+
+  for (int i=0; i<n; i++) {
+    x[i] = n * sin(i*theta);
+    y[i] = n * cos(i*theta);
+  }
+
+  // Construct the plotter 
+  PlotterParams params;
+  ofstream pout(IMAGE_FILE);
+  PSPlotter P(cin, pout, cerr, params);
+
+  // Open the plotter
+  if (P.openpl() < 0) {
+    cerr << "Unable to open plotter" << endl;
+    return 1;
+  }
+  // Set drawing parameters
+  P.flinewidth(0.05);
+  P.pencolorname("black");
+
+  // Set up my coordinate system
+  P.space(-n-1, -n-1, n+1, n+1);
+  
+  // Draw the edges
+  for (int i=0; i<n-1; i++) {
+    for (int j=i+1; j<n; j++) {
+      // if i-j is a perfect square ...
+      Mod diff(i-j);
+      if (squares.find(diff) != squares.end()) {
+	// ... then we draw the edge
+	P.fline(x[i],y[i],x[j],y[j]);
+      }
+    }
+  }
+
+  // Draw the vertices
+  P.fillcolorname("white");
+  P.filltype(1);
+  for (int i=0; i<n; i++) {
+    P.fcircle(x[i], y[i], 0.5);
+  }
+
+  // Release allocated arrays for x and y
+  delete[] x;
+  delete[] y;
+
+  // Close the image
+  if (P.closepl() < 0) {
+    cerr << "Unable to close plotter" << endl;
+    return 1;
+  }
+
+  return 0;
+}
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d56 1
+a56 1
+  // Set up the plotter 
+a57 1
+  params.setplparam ("PAGESIZE", (char *)"letter");
+a69 1
+
+d99 1
+a99 1
+    return 2;
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@a60 2
+  
+  
+d94 1
+a94 1
+  
+a104 1
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+d27 28
+d60 3
+a62 1
+  GIFPlotter P(cin, pout, cerr, params);
+d69 4
+d75 21
+a95 1
+  P.fspace(0.,0.,1.,1.);
+d97 2
+a98 3
+  // Set drawing parameters
+  P.linewidth(1);
+  P.pencolorname("black");
+@

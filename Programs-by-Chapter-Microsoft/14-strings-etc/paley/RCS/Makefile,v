@@ -1,0 +1,41 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2005.07.22.15.12.02;	author ers;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@paley.pdf:	paley.eps
+	epstopdf paley.eps
+
+paley.eps:	paley
+	./paley 17
+
+
+
+OBJS = paley.o Mod.o gcdx.o
+paley:	$(OBJS)
+	g++ $(OBJS) -o paley -L/Users/ers/Common/lib -lplotter
+
+CXXFLAGS = -I /Users/ers/Common/include
+
+.phony:	clean
+
+clean:
+	rm -f paley $(OBJS)
+@

@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "max-of-three", "max-of-three\max-of-three.vcproj", "{D272BA71-6B2B-4B4C-AEBD-01622C7205CE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cmod", "cmod\cmod.vcproj", "{7BC5ABD6-0A9F-4684-B2D8-92703E1EC647}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "poly-test", "poly-test\poly-test.vcproj", "{F7C10BC5-2C05-4C96-82DA-C1B43588DA14}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{D272BA71-6B2B-4B4C-AEBD-01622C7205CE}.Debug.ActiveCfg = Debug|Win32
+		{D272BA71-6B2B-4B4C-AEBD-01622C7205CE}.Debug.Build.0 = Debug|Win32
+		{D272BA71-6B2B-4B4C-AEBD-01622C7205CE}.Release.ActiveCfg = Release|Win32
+		{D272BA71-6B2B-4B4C-AEBD-01622C7205CE}.Release.Build.0 = Release|Win32
+		{7BC5ABD6-0A9F-4684-B2D8-92703E1EC647}.Debug.ActiveCfg = Debug|Win32
+		{7BC5ABD6-0A9F-4684-B2D8-92703E1EC647}.Debug.Build.0 = Debug|Win32
+		{7BC5ABD6-0A9F-4684-B2D8-92703E1EC647}.Release.ActiveCfg = Release|Win32
+		{7BC5ABD6-0A9F-4684-B2D8-92703E1EC647}.Release.Build.0 = Release|Win32
+		{F7C10BC5-2C05-4C96-82DA-C1B43588DA14}.Debug.ActiveCfg = Debug|Win32
+		{F7C10BC5-2C05-4C96-82DA-C1B43588DA14}.Debug.Build.0 = Debug|Win32
+		{F7C10BC5-2C05-4C96-82DA-C1B43588DA14}.Release.ActiveCfg = Release|Win32
+		{F7C10BC5-2C05-4C96-82DA-C1B43588DA14}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

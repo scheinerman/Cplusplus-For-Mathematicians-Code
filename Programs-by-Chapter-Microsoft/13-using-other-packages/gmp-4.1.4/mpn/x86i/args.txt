@@ -1,0 +1,9 @@
+
+argument 0 is |nasm|
+argument 1 is |-O9|
+argument 2 is |-Xvc|
+argument 3 is |-f|
+argument 4 is |win32|
+argument 5 is |-o|
+argument 6 is |c:\Documents and Settings\Brian Gladman\My Documents\Visual Studio Projects\gmp-4.1.3\vc_build\lib_mpn_p0/Release/mpn/aors_n.obj|
+argument 7 is |c:\Documents and Settings\Brian Gladman\My Documents\Visual Studio Projects\gmp-4.1.3\mpn\x86i\aors_n.asm|

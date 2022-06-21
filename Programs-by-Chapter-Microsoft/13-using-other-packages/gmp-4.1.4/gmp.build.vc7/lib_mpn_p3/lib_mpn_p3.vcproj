@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="lib_mpn_p3"
+	ProjectGUID="{8A2E028B-6E13-4E8A-B0F5-9A58C30BFB11}"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="4"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				OptimizeForProcessor="2"
+				AdditionalIncludeDirectories="..\;..\..\"
+				PreprocessorDefinitions="_DEBUG;_LIB;_WIN32;WIN32;HAVE_CONFIG_H"
+				MinimalRebuild="TRUE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				UsePrecompiledHeader="0"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\mpn.lib"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="if not exist ..\lib md ..\lib
+copy $(OutDir)\mpn.lib ..\lib\mpn.lib
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"
+				CommandLine="copy ..\config-vc7.p3 ..\config.h
+copy ..\..\mpn\x86i\gmp-mparam.h ..\..\
+copy ..\gmp.h ..\..\
+"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="4"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				OptimizeForProcessor="2"
+				AdditionalIncludeDirectories="..\;..\..\"
+				PreprocessorDefinitions="WIN32;NDEBUG;_LIB;_WIN32;HAVE_CONFIG_H"
+				RuntimeLibrary="0"
+				UsePrecompiledHeader="0"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)\mpn.lib"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="if not exist ..\lib md ..\lib
+copy $(OutDir)\mpn.lib ..\lib\mpn.lib
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"
+				CommandLine="copy ..\config-vc7.p3 ..\config.h
+copy ..\..\mpn\x86i\gmp-mparam.h ..\..\
+copy ..\gmp.h ..\..\
+"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Header Files">
+			<File
+				RelativePath="..\config.h">
+			</File>
+			<File
+				RelativePath="..\..\gmp-impl.h">
+			</File>
+			<File
+				RelativePath="..\gmp.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Source Files"
+			Filter="">
+			<File
+				RelativePath="..\..\mpn\generic\add.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\add_1.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\addsub_n.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\bdivmod.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\cmp.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\dc_divrem_n.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\divis.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\divrem.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\divrem_2.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\dump.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\fib2_ui.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\gcd.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\gcd_1.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\gcdext.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\get_str.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\jacbase.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\mp_bases.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\mul.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\mul_fft.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\mul_n.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\perfsqr.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\pow_1.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\random.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\random2.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\rootrem.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\sb_divrem_mn.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\scan0.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\scan1.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\set_str.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\sizeinbase.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\sqrtrem.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\sub.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\sub_1.c">
+			</File>
+			<File
+				RelativePath="..\..\mpn\generic\tdiv_qr.c">
+			</File>
+			<Filter
+				Name="Assembler"
+				Filter="">
+				<File
+					RelativePath="..\..\mpn\x86i\aors_n.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\p6\aorsmul_1.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\p6\copyd.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\copyi.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\p6\dive_1.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\p6\diveby3.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\divrem_1.asm">
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\lshift.asm">
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\p6\mod_1.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\mod_34lsub1.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\p6\mode1o.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\mul_1.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\mul_basecase.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\rshift.asm">
+					<FileConfiguration
+						Name="Debug|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\p6\sqr_basecase.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\udiv.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\mpn\x86i\umul.asm">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+							Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+					</FileConfiguration>
+				</File>
+				<Filter
+					Name="mmx"
+					Filter="">
+					<File
+						RelativePath="..\..\mpn\x86i\p6\mmx\divrem_1.asm">
+						<FileConfiguration
+							Name="Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+								Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+								Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="..\..\mpn\x86i\p6\mmx\lshift.asm">
+						<FileConfiguration
+							Name="Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+								Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+								Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="..\..\mpn\x86i\p6\p3mmx\popham.asm">
+						<FileConfiguration
+							Name="Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+								Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+								Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="..\..\mpn\x86i\p6\mmx\popham.asm">
+						<FileConfiguration
+							Name="Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+								Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+								Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="..\..\mpn\x86i\p6\mmx\rshift.asm">
+						<FileConfiguration
+							Name="Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+								Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="nasm -O9 -Xvc -f win32 -I &quot;$(InputDir)/&quot; -o &quot;$(IntDir)/mpn/$(InputName).obj&quot; &quot;$(InputPath)&quot;
+"
+								Outputs="$(IntDir)/mpn/$(InputName).obj"/>
+						</FileConfiguration>
+					</File>
+				</Filter>
+			</Filter>
+		</Filter>
+		<File
+			RelativePath="..\config-vc7.p3">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>
